@@ -1,0 +1,327 @@
+body{
+	 font-family: 'Raleway', serif;  
+} 
+
+.full-width{
+	 width: 100%;
+	 margin: 0 auto;
+}
+
+.half-width{
+	 width: 48%;
+	 float: left;
+   flex-wrap: wrap;
+   padding-right: 10px;
+   padding-bottom: 50px;
+}
+
+.third-width{
+	 width: 32%;
+	 float: left;
+	 text-align: center;
+   padding: 15px;
+   box-sizing: border-box;
+}
+
+header .full-width {
+   align-items: right;
+   text-align: center;
+   padding: 250px 0;
+   width: 100%;
+}
+
+header h1 {
+   color: white;
+   font-size: 80px;
+   line-height: 70px;
+   font-family: 'AlexBrushFont', cursive;
+}
+
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: rgb(235, 236, 254);
+   z-index: 100;
+}
+nav ul{
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 50px;
+}
+
+ ul li{
+    display: inline-block;
+    padding-right: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    color: #828282;
+    padding-left: 80px; 
+} 
+
+h2 {
+   padding-top: 50px;
+	 font-size:40px;
+	 text-align: center;
+}
+.specialstyle {
+  padding-top: 100px;
+}
+
+.sangria-background {
+   background:url('file:///Users/Mervenaz/Desktop/project/sangria.jpg')no-repeat center center;
+   width: 100%;
+   background-size:cover;
+   background-attachment: fixed;
+   height:500px;
+}
+
+.hotel-background {
+   background:url('file:///Users/Mervenaz/Desktop/project/bali.jpg')no-repeat center center;
+   width: 100%;
+   background-size:cover;
+   background-attachment: fixed;
+   height:500px;
+}
+
+.center-h1 {
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   padding-bottom: 250px;
+}
+
+.custom-h1 {
+   text-align:center;
+   color:white;
+   letter-spacing:5px;
+   margin-bottom:0;
+}
+
+.custom-font {
+   font-family:'AlexBrushFont', cursive;
+   color:white;
+   font-size:75px;
+   line-height:0;
+}
+
+.third-width img {
+   margin: 0 auto;
+   width: 100%;
+}
+
+.wrap {
+   overflow: hidden;
+   margin: 0;
+}
+
+.box {
+   float: left;
+   position: relative;
+   width: 20%;
+   padding-bottom: 20%;
+}
+
+.boxInner {
+   position: absolute;
+   left: 10px;
+   right: 10px;
+   top: 10px;
+   bottom: 20px;
+   overflow: hidden;
+}
+
+.boxInner img {
+   width: 100%;
+}
+
+.boxInner .titleBox {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: -50px;
+   background: rgba(0, 0, 0, 0.5);
+   color: #FFF;
+   padding: 0;
+   text-align: center;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+section.gallery .boxInner:hover .titleBox {
+    margin-bottom: 0;
+}
+
+footer {
+  background-color: rgb(235, 236, 254);
+}
+
+.sm-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.sm-ul a {
+  display: block;
+  padding: .5em .5rem;
+  font-size: 1rem;
+  color: gray;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+
+.sm-ul a:hover,
+.sm-ul a:focus {
+  color: rgb(44, 122, 247);
+}
+
+.container {
+  width: 100%; 
+  height: 100%
+}
+
+@media only screen and (max-width: 850px) {
+  nav ul{
+text-align: right;
+  }
+}
+button {
+  width: 32%;
+  padding: 1em 0;
+  font-size: 1em;
+  font-family: 'Raleway';
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: rgb(9, 9, 130);
+  transition: transform 150ms ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: .9;
+  transform: scale(1.2);
+}
+
+.wrapper{
+  position:relative;
+  height:200px; 
+  overflow: hidden;
+  transition: all 450ms;
+}
+
+.wrapper::after{
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-image: linear-gradient(to bottom, transparent 0%, white 100%);
+  transition: all 450ms;
+}
+
+.wrapper.open {
+height:100%;
+}
+
+.wrapper.open::after {
+  background-image: none; 
+}
+
+.image {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: block;
+    transition:opacity 1s ease-in-out; 
+    -moz-transition:opacity 1s ease-in-out; 
+    -webkit-transition:opacity 1s ease-in-out;
+}
+
+.image{
+    opacity: 0; 
+}
+
+.active{
+    opacity: 1;
+}
+
+.image:nth-of-type(1) {
+  background: url("file:///Users/Mervenaz/Desktop/project/insta14.jpeg") no-repeat center center;
+  height:600px;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.image:nth-of-type(2) {
+  background: url("file:///Users/Mervenaz/Desktop/project/insta15.jpg") no-repeat center center;
+  background-size: cover;
+  height:600px;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.image:nth-of-type(3) {
+  background: url("file:///Users/Mervenaz/Desktop/project/insta16.jpg") no-repeat center center;
+  background-size: cover;
+  height:600px;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.main-screen {
+  z-index: 98;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow{
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  list-style: none;
+}
+
+h1 {
+  position: relative;
+  top: 35%;
+  opacity: .8;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;  
+}
+
+.half-width img {
+   width: 95%;
+   border: 3px solid gray;
+   border-radius: 15px;
+}
+
