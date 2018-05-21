@@ -8,11 +8,11 @@ body{
 }
 
 .half-width{
-	 width: 48%;
-	 float: left;
+	 width: 50%;
+   float: left;
    flex-wrap: wrap;
-   padding-right: 10px;
-   padding-bottom: 50px;
+   padding: 0 10px 50px;
+   box-sizing: border-box;
 }
 
 .third-width{
